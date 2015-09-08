@@ -1,0 +1,12 @@
+---
+
+- name: Configuring <%= @data[:name] %>
+  template:
+    src: "{{ item }}.j2"
+    dest: "/{{ item }}"
+    owner: root
+    group: root
+    mode: "0644"
+  notify: restart <%= @data[:name] %>
+  with_items:
+    - etc/<%= @data[:name] %>.conf

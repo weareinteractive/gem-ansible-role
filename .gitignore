@@ -1,0 +1,7 @@
+.*
+*~
+/pkg/
+!.empty_directory
+!.editorconfig
+!.travis.yml
+!.git*

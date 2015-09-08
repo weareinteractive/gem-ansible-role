@@ -1,0 +1,5 @@
+.*
+*~
+!.editorconfig
+!.travis.yml
+!.git*

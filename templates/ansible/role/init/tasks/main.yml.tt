@@ -1,0 +1,30 @@
+---
+
+- include: install.yml
+  tags:
+    - <%= @data[:category] %>
+    - install
+    - <%= @data[:name] %>
+    - <%= @data[:name] %>-install
+
+- include: config.yml
+  tags:
+    - <%= @data[:category] %>
+    - config
+    - <%= @data[:name] %>
+    - <%= @data[:name] %>-config
+
+- include: manage.yml
+  tags:
+    - <%= @data[:category] %>
+    - manage
+    - <%= @data[:name] %>
+    - <%= @data[:name] %>-manage
+
+- include: service.yml
+  tags:
+    - <%= @data[:category] %>
+    - service
+    - <%= @data[:name] %>
+    - <%= @data[:name] %>-service
+

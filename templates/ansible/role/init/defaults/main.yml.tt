@@ -1,0 +1,10 @@
+---
+
+# package name (version)
+<%= @data[:var_name] %>_package: <%= @data[:name] %>
+# service name
+<%= @data[:var_name] %>_service_name: <%= @data[:name] %>
+# start on boot
+<%= @data[:var_name] %>_service_enabled: yes
+# current state: started, stopped
+<%= @data[:var_name] %>_service_state: started

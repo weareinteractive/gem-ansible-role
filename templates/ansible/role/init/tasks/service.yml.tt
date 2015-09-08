@@ -1,0 +1,7 @@
+---
+
+- name: Configuring service
+  service:
+    name: "{{ <%= @data[:var_name] %>_service_name }}"
+    state: "{{ <%= @data[:var_name] %>_service_state }}"
+    enabled: "{{ <%= @data[:var_name] %>_service_enabled }}"
