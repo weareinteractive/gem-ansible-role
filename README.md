@@ -1,6 +1,9 @@
 # Ansible Role
 
-[![Gem Version](https://badge.fury.io/rb/ansible-role.png)](http://badge.fury.io/rb/ansible-role)
+[![Gem Version](https://badge.fury.io/rb/ansible-role.svg)](http://badge.fury.io/rb/ansible-role)
+[![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/gem-ansible-role.svg)](https://github.com/weareinteractive/gem-ansible-role)
+[![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/gem-ansible-role.svg)](https://github.com/weareinteractive/ansible-apache2)
+
 
 > Gem with some useful Ansible role command line tools.
 >
