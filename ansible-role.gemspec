@@ -10,8 +10,9 @@ Gem::Specification.new do |spec|
   spec.email         = ["franklin@weareinteractive.com"]
   spec.description   = %q{Gem with some useful Ansible role command line tools.}
   spec.summary       = %q{Command line snippets.}
-  spec.homepage      = "https://github.com/franklinkim/gem-ansible-role"
+  spec.homepage      = "https://github.com/weareinteractive/gem-ansible-role"
   spec.license       = "MIT"
+  spec.required_ruby_version = '>= 2.2.0'
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
