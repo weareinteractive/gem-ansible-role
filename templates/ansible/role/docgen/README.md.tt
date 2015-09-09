@@ -1,0 +1,26 @@
+<%= @data[:meta][:readme]["title"] %>
+<%= @data[:meta][:readme]["badges"] %>
+<%= @data[:meta][:readme]["description"] %>
+## Installation
+
+<%= @data[:meta][:readme]["installation"] %>
+## Dependencies
+
+* Ansible >= <%= @data[:meta][:main]["galaxy_info"]["min_ansible_version"] %>
+<% @data[:meta][:main]["dependencies"].each do |dep| %><%= "* #{dep}\n" %><% end %>
+## Variables
+
+Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
+
+```
+<%= @data[:files][:defaults][:main] %>
+```
+
+## Usage
+
+```
+<%= @data[:files][:tests][:main] %>
+```
+
+<%= @data[:meta][:readme]["testing"] %>
+<%= @data[:meta][:readme]["license"] %>
