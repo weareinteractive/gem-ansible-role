@@ -74,6 +74,7 @@ module Ansible
 
         @data[:files] = {}
         @data[:files][:defaults] = get_yaml_files("defaults")
+        @data[:files][:handlers] = get_yaml_files("handlers")
         @data[:files][:tests] = get_yaml_files("tests")
         @data[:files][:vars] = get_yaml_files("vars")
 
@@ -132,6 +133,9 @@ module Ansible
 
         def get_yaml_files(path)
           data = {}
+
+          return nil unless File.directory?("#{Dir.getwd}/#{path}")
+
           Dir["#{Dir.getwd}/#{path}/*.yml"].each do |file_name|
             basename = File.basename(file_name, '.yml')
             file = File.open(file_name, "rb")

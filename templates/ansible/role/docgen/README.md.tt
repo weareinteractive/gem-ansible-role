@@ -1,27 +1,27 @@
 # Ansible <%= @data[:meta][:readme]["galaxy_name"] %> role
 
 <%= @data[:meta][:readme]["badges"] %>
-> `<%= @data[:meta][:readme]["galaxy_name"] %>` is an [ansible](http://www.ansible.com) role which:
+> `<%= @data[:meta][:readme]["galaxy_name"] %>` is an [Ansible](http://www.ansible.com) role which:
 >
 <%= @data[:meta][:readme]["description"] %>
 ## Installation
 
 Using `ansible-galaxy`:
 
-```
+```shell
 $ ansible-galaxy install <%= @data[:meta][:readme]["galaxy_name"] %>
 ```
 
 Using `requirements.yml`:
 
-```
+```yaml
 - src: <%= @data[:meta][:readme]["galaxy_name"] %>
 ```
 
 Using `git`:
 
-```
-$ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @data[:meta][:readme]["github_name"] %> <%= @data[:meta][:readme]["galaxy_name"] %>
+```shell
+$ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @data[:meta][:readme]["github_name"] %>.git <%= @data[:meta][:readme]["galaxy_name"] %>
 ```
 
 ## Dependencies
@@ -32,21 +32,30 @@ $ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @
 
 Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
 
-```
+```yaml
 <%= @data[:files][:defaults][:main] %>
 ```
+<% if @data[:files][:handlers] %>
+## Handlers
 
+These are the handlers that are defined in `handlers/main.yml`.
+
+```yaml
+<%= @data[:files][:handlers][:main] %>
+```
+<% end %>
+<% if @data[:meta][:readme]["after_handlers"] %><%= @data[:meta][:readme]["after_handlers"] %><% end %>
 ## Usage
 
 This is an example playbook:
 
-```
+```yaml
 <%= @data[:files][:tests][:main] %>
 ```
 
 ## Testing
 
-```
+```shell
 $ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @data[:meta][:readme]["github_name"] %>.git
 $ cd <%= @data[:meta][:readme]["github_name"] %>
 $ vagrant up
@@ -61,9 +70,9 @@ In lieu of a formal styleguide, take care to maintain the existing coding style.
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
 
-To update the `README.md` file please install and run `ansible-role`:
+*Note: To update the `README.md` file please install and run `ansible-role`:*
 
-```
+```shell
 $ gem install ansible-role
 $ ansible-role docgen
 ```

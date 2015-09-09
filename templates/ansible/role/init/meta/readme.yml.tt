@@ -13,22 +13,4 @@ description: |
   > * configures <%= @data[:name] %>
   > * manages <%= @data[:name] %>
   > * configures service
-installation: |
-  Using `ansible-galaxy`:
-
-  ```
-  $ ansible-galaxy install <%= @data[:role_name] %>
-  ```
-
-  Using `requirements.yml`:
-
-  ```
-  - src: <%= @data[:role_name] %>
-  ```
-
-  Using `git`:
-
-  ```
-  $ git clone https://github.com/<%= @data[:github_path] %> <%= @data[:role_name] %>
-  ```
 
