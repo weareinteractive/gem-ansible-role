@@ -33,9 +33,9 @@ module Ansible
         puts ""
 
         say "• Role", :yellow
-        @data[:name] = prompt "  Name", nil, true
-        @data[:description] = prompt "  Description", nil, true
-        @data[:category] = prompt "  Category (system, web, ...)", nil, true
+        @data[:name] = prompt "  Name", "my-role", true
+        @data[:description] = prompt "  Description", "Best role ever!", true
+        @data[:category] = prompt "  Category", "development", true
         @data[:min_ansible_version] = prompt "  Min ansible version", "1.9", true
         @data[:var_name] = @data[:name].sub("-", "_")
         puts ""
@@ -47,7 +47,6 @@ module Ansible
         puts ""
 
         say "• Ansible Galaxy", :yellow
-        @data[:galaxy_id] = prompt "  Role ID", 0
         @data[:galaxy_user] = prompt "  User", ENV['username']
         puts ""
 

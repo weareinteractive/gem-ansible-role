@@ -1,9 +1,29 @@
-<%= @data[:meta][:readme]["title"] %>
+# Ansible <%= @data[:meta][:readme]["galaxy_name"] %> role
+
 <%= @data[:meta][:readme]["badges"] %>
+> `<%= @data[:meta][:readme]["galaxy_name"] %>` is an [ansible](http://www.ansible.com) role which:
+>
 <%= @data[:meta][:readme]["description"] %>
 ## Installation
 
-<%= @data[:meta][:readme]["installation"] %>
+Using `ansible-galaxy`:
+
+```
+$ ansible-galaxy install <%= @data[:meta][:readme]["galaxy_name"] %>
+```
+
+Using `requirements.yml`:
+
+```
+- src: <%= @data[:meta][:readme]["galaxy_name"] %>
+```
+
+Using `git`:
+
+```
+$ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @data[:meta][:readme]["github_name"] %> <%= @data[:meta][:readme]["galaxy_name"] %>
+```
+
 ## Dependencies
 
 * Ansible >= <%= @data[:meta][:main]["galaxy_info"]["min_ansible_version"] %>
@@ -18,9 +38,35 @@ Here is a list of all the default variables for this role, which are also availa
 
 ## Usage
 
+This is an example playbook:
+
 ```
 <%= @data[:files][:tests][:main] %>
 ```
 
-<%= @data[:meta][:readme]["testing"] %>
-<%= @data[:meta][:readme]["license"] %>
+## Testing
+
+```
+$ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @data[:meta][:readme]["github_name"] %>.git
+$ cd <%= @data[:meta][:readme]["github_name"] %>
+$ vagrant up
+```
+
+## Contributing
+In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests and examples for any new or changed functionality.
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+To update the `README.md` file please install and run `ansible-role`:
+
+```
+$ gem install ansible-role
+$ ansible-role docgen
+```
+
+## License
+Copyright (c) <%= @data[:meta][:main]["galaxy_info"]["company"] %> under the MIT license.
