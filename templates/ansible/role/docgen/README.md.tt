@@ -29,6 +29,7 @@ $ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @
 * Ansible >= <%= @data[:meta][:main]["galaxy_info"]["min_ansible_version"] %>
 <%- @data[:meta][:main]["dependencies"].each do |dep| -%><%= "* #{dep}\n" %><%- end -%>
 <%- if @data[:meta][:readme]["after_dependencies"] -%><%= @data[:meta][:readme]["after_dependencies"] %><%- end -%>
+
 ## Variables
 
 Here is a list of all the default variables for this role, which are also available in `defaults/main.yml`.
