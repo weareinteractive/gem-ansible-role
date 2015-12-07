@@ -1,0 +1,4 @@
+[clog]
+changelog = "CHANGELOG.md"
+repository = "https://github.com/<%= @data[:github_path] %>"
+from-latest-tag = true

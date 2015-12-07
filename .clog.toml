@@ -1,0 +1,4 @@
+[clog]
+changelog = "CHANGELOG.md"
+repository = "https://github.com/weareinteractive/gem-ansible-role"
+from-latest-tag = true
