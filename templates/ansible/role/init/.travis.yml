@@ -1,10 +1,39 @@
 ---
+language: python
+python: "2.7"
 
-language: ruby
-sudo: required
-services:
-  - docker
+# Use the new container infrastructure
+sudo: false
+
+# Install ansible
+addons:
+  apt:
+    packages:
+    - python-pip
+
 install:
-  - docker pull franklinkim/ansible:ubuntu-trusty
+  # Install ansible
+  - pip install ansible
+
+  # Check ansible version
+  - ansible --version
+
+  # Create inventory file
+  - printf 'localhost' > tests/inventory
+
+  # Create ansible.cfg with correct roles_path
+  - printf '[defaults]\nroles_path=../' > ansible.cfg
+
+  # Fix role name
+  - ln -s ./ ../<%= @data[:role_name] %>
+
 script:
-  - docker run -v $(pwd):/opt/ansible franklinkim/ansible:ubuntu-trusty tests/run.sh
+  # Basic role syntax check
+  - ansible-playbook -i tests/inventory tests/main.yml --syntax-check
+  # TODO run ansible lint
+  # - ansible-lint -L tests/inventory
+  # Run test playbooke
+  - ansible-playbook -i tests/inventory tests/main.yml
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
