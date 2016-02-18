@@ -1,6 +1,2 @@
-.*
-*~
-!.editorconfig
-!.travis.yml
-!.clog.toml
-!.git*
+.DS_Store
+.vagrant
