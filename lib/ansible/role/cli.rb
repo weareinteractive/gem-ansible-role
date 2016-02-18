@@ -36,21 +36,17 @@ module Ansible
         @data[:name] = prompt "  Name", "my-role", true
         @data[:description] = prompt "  Description", "Best role ever!", true
         @data[:category] = prompt "  Category", "development", true
-        @data[:min_ansible_version] = prompt "  Min ansible version", "1.9", true
+        @data[:min_ansible_version] = prompt "  Min ansible version", "2.0", true
         @data[:var_name] = @data[:name].sub("-", "_")
         puts ""
 
         say "• GitHub", :yellow
-        @data[:github_user] = prompt "  User", g.config('user.name'), true
+        @data[:github_user] = prompt "  User/Organization", g.config('user.name'), true
         @data[:github_name] = prompt "  Repository", File.basename(Dir.getwd)
         @data[:github_path] = "#{@data[:github_user]}/#{@data[:github_name]}"
         puts ""
 
-        say "• Ansible Galaxy", :yellow
-        @data[:galaxy_user] = prompt "  User", ENV['username']
-        puts ""
-
-        @data[:role_name] = "#{@data[:galaxy_user]}.#{@data[:name]}"
+        @data[:role_name] = "#{@data[:github_user]}.#{@data[:name]}"
 
         # render templates
         directory  "templates/ansible/role/init", Dir.getwd
