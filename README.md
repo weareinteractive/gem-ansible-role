@@ -5,7 +5,7 @@
 [![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/gem-ansible-role.svg)](https://github.com/weareinteractive/gem-ansible-role)
 
 
-> Ansible role command line tool for.
+> Ansible role command line utility for.
 >
 > * Initialize a new Ansible role
 > * Re-Generating README.md
