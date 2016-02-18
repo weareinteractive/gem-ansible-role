@@ -4,14 +4,18 @@ galaxy_name: <%= @data[:role_name] %>
 github_user: <%= @data[:github_user] %>
 github_name: <%= @data[:github_name] %>
 badges: |
-
   [![Build Status](https://img.shields.io/travis/<%= @data[:github_path] %>.svg)](https://travis-ci.org/<%= @data[:github_path] %>)
   [![Galaxy](http://img.shields.io/badge/galaxy-<%= @data[:role_name] %>-role-blue.svg)](https://galaxy.ansible.com/<%= @data[:github_user] %>/<%= @data[:name] %>)
   [![GitHub Tags](https://img.shields.io/github/tag/<%= @data[:github_path] %>.svg)](https://github.com/<%= @data[:github_path] %>)
   [![GitHub Stars](https://img.shields.io/github/stars/<%= @data[:github_path] %>.svg)](https://github.com/<%= @data[:github_path] %>)
-
 description: |
   > * installs <%= @data[:name] %>
   > * configures <%= @data[:name] %>
   > * manages <%= @data[:name] %>
   > * configures service
+after_dependencies: |
+  * foo dependency
+after_handlers: |
+  ## Another Section
+
+  Lorem ipsum dolor sit atem ...
