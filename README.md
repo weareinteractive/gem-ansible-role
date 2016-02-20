@@ -30,7 +30,7 @@ Commands:
 Initialize a new role including:
 
 * [`Travis`](https://travis-ci.org): for testing
-* [`Vagrant`](https://www.vagrantup.com/): for local testing
+* [`Docker`](https://www.docker.com/): for local testing
 * [`clog-cli`](https://github.com/clog-tool/clog-cli): for generating CHANGELOG
 * [`.editorconfig`](http://editorconfig.org/): for consistent coding stlye
 
@@ -62,7 +62,7 @@ To generate your role, please give me some info about:
       create  .travis.yml
       create  CHANGELOG.md
       create  LICENSE
-      create  Vagrantfile
+      create  Makefile
       create  defaults/main.yml
       create  files
       create  handlers/main.yml
@@ -75,7 +75,6 @@ To generate your role, please give me some info about:
       create  tasks/service.yml
       create  templates/etc/my-role.conf.j2
       create  tests/main.yml
-      create  tests/run.sh
       create  vars/main.yml
       create  README.md
 ```

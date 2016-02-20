@@ -1,5 +1,9 @@
 ---
 - hosts: all
+  # pre_tasks for installing dependencies for running the tests within docker
+  # pre_tasks:
+  #  - name: Installing openssh
+  #    action: "{{ ansible_pkg_mgr }} pkg=my-package state=present"
   roles:
     - <%= @data[:role_name] %>
   vars:

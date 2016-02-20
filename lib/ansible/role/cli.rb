@@ -3,7 +3,6 @@ require "git"
 require "thor"
 require "yaml"
 require "ostruct"
-require "fileutils"
 
 module Ansible
   module Role
@@ -51,9 +50,6 @@ module Ansible
 
         # render templates
         directory  "templates/ansible/role/init", Dir.getwd
-
-        # set mode
-        FileUtils.chmod("a+x", "tests/run.sh")
 
         # generate docs
         docgen

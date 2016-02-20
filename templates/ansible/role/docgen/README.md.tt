@@ -61,7 +61,7 @@ This is an example playbook:
 ```shell
 $ git clone https://github.com/<%= @data[:meta][:readme]["github_user"] %>/<%= @data[:meta][:readme]["github_name"] %>.git
 $ cd <%= @data[:meta][:readme]["github_name"] %>
-$ vagrant up
+$ make test
 ```
 
 ## Contributing
