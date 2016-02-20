@@ -1,5 +1,4 @@
 ---
-
 # package name (version)
 <%= @data[:var_name] %>_package: <%= @data[:name] %>
 # service name
