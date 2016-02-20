@@ -2,33 +2,15 @@
 language: python
 python: "2.7"
 
-# Use the new container infrastructure
-sudo: false
+sudo: required
 
-# Install ansible
-addons:
-  apt:
-    packages:
-    - python-pip
-
-install:
-  # Install ansible
-  - pip install ansible
-
-  # Check ansible version
-  - ansible --version
-
-  # Create ansible.cfg with correct roles_path
-  - printf '[defaults]\nroles_path=../' > ansible.cfg
-
-  # Create role name symlink
-  - ln -s ./ ../<%= @data[:role_name] %>
+before_install:
+  - docker pull franklinkim/ansible:ubuntu-trusty
+  - docker pull franklinkim/ansible:ubuntu-precise
 
 script:
-  # Basic role syntax check
-  - ansible-playbook tests/main.yml -i 'localhost,' -c local --syntax-check
-  # Run test playbook
-  - ansible-playbook -i 'localhost,' -c local tests/main.yml
+  - docker run -v $(pwd):/opt/ansible franklinkim/ansible:ubuntu-trusty tests/run.sh
+  - docker run -v $(pwd):/opt/ansible franklinkim/ansible:ubuntu-precise tests/run.sh
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
