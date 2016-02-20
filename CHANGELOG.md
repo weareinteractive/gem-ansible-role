@@ -1,3 +1,13 @@
+<a name="v1.1.1"></a>
+### v1.1.1 (2016-02-20)
+
+
+#### Bug Fixes
+
+* **init:**  update .travis for makefile ([13590229](https://github.com/weareinteractive/gem-ansible-role/commit/13590229073b4c2bca30ea789c772b8366bcf7d4))
+
+
+
 <a name="v1.1.0"></a>
 ## v1.1.0 (2016-02-20)
 
