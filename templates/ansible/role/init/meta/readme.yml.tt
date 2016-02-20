@@ -13,4 +13,14 @@ description: |
   > * configures <%= @data[:name] %>
   > * manages <%= @data[:name] %>
   > * configures service
+after_dependencies: |
+  * dependency a
+  * dependency b
+after_handlers: |
+  ## A new section after the handler section
 
+  Lorem ipsum dolor sit atem ...
+after_usage: |
+  ## A new section after the usage section
+
+  Lorem ipsum dolor sit atem ...

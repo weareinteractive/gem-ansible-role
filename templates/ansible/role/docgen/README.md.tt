@@ -55,6 +55,7 @@ This is an example playbook:
 <%= @data[:files][:tests][:main] %>
 ```
 
+<% if @data[:meta][:readme]["after_usage"] %><%= @data[:meta][:readme]["after_usage"] %><% end %>
 ## Testing
 
 ```shell
