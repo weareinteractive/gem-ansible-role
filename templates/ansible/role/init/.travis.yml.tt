@@ -4,13 +4,15 @@ python: "2.7"
 
 sudo: required
 
+services:
+  - docker
+
 before_install:
-  - docker pull franklinkim/ansible:ubuntu-trusty
-  - docker pull franklinkim/ansible:ubuntu-precise
+  - docker pull williamyeh/ansible:debian8
+  - docker pull williamyeh/ansible:ubuntu14.04
 
 script:
-  - docker run -v $(pwd):/opt/ansible franklinkim/ansible:ubuntu-trusty tests/run.sh
-  - docker run -v $(pwd):/opt/ansible franklinkim/ansible:ubuntu-precise tests/run.sh
+  - make test
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
