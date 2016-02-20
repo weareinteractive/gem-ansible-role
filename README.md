@@ -4,7 +4,6 @@
 [![GitHub Tags](https://img.shields.io/github/tag/weareinteractive/gem-ansible-role.svg)](https://github.com/weareinteractive/gem-ansible-role)
 [![GitHub Stars](https://img.shields.io/github/stars/weareinteractive/gem-ansible-role.svg)](https://github.com/weareinteractive/gem-ansible-role)
 
-
 > Small commandline tool to help with ansible roles.
 >
 > * `init`: Initialize new ansible roles
@@ -12,13 +11,13 @@
 
 ## Installation
 
-```
+```bash
 $ gem install ansible-role
 ```
 
 ## Usage
 
-```
+```bash
 $ ansible-role
 Commands:
   ansible-role docgen          # Generate README file
@@ -26,7 +25,7 @@ Commands:
   ansible-role init            # Initialize new role
 ```
 
-### Initialize
+### Init
 
 Initialize a new role including:
 
@@ -43,7 +42,7 @@ $ ansible-role init
 To generate your role, please give me some info about:
 
 • Author
-  Name [franklin <franklin@weareinteractive.com>]: franklin <franklin@weareinteractive.com>]
+  Name [franklin <franklin@weareinteractive.com>]: franklin <franklin@weareinteractive.com
   Company: We Are Interactive
 
 • Role

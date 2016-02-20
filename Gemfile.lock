@@ -1,12 +1,14 @@
 PATH
   remote: .
   specs:
-    ansible-role (1.0.0)
+    ansible-role (0.2.0)
+      git
       thor
 
 GEM
   remote: https://rubygems.org/
   specs:
+    git (1.2.9.1)
     rake (10.4.2)
     thor (0.19.1)
 
@@ -17,3 +19,6 @@ DEPENDENCIES
   ansible-role!
   bundler
   rake
+
+BUNDLED WITH
+   1.10.6

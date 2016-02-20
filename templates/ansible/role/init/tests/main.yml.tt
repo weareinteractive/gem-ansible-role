@@ -1,7 +1,5 @@
 ---
-
 - hosts: all
-  sudo: yes
   roles:
     - <%= @data[:role_name] %>
   vars:

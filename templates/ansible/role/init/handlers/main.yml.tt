@@ -1,5 +1,4 @@
 ---
-
 - name: restart <%= @data[:name] %>
   service:
     name: "{{ <%= @data[:var_name] %>_service_name }}"

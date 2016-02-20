@@ -1,8 +1,3 @@
-.*
-*~
+.DS_Store
+/bin/
 /pkg/
-!.empty_directory
-!.editorconfig
-!.travis.yml
-!.clog.toml
-!.git*
