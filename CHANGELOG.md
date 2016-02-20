@@ -1,3 +1,13 @@
+<a name="v1.1.0"></a>
+## v1.1.0 (2016-02-20)
+
+
+#### Features
+
+* **init:**  remove Vagrant and run test with Docker throuch makefile ([2d4b3820](https://github.com/weareinteractive/gem-ansible-role/commit/2d4b3820beb50fa8a5edafb39bdaa036eb721cc3))
+
+
+
 <a name="v1.0.0"></a>
 ## v1.0.0 (2016-02-18)
 
