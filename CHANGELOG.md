@@ -1,3 +1,13 @@
+<a name="v1.1.2"></a>
+### v1.1.2 (2016-05-02)
+
+
+#### Bug Fixes
+
+*   fix style guide typo ([74c1ee84](https://github.com/weareinteractive/gem-ansible-role/commit/74c1ee848b7398ca81bb96b392a2b6d26e1395d6))
+
+
+
 <a name="v1.1.1"></a>
 ### v1.1.1 (2016-02-20)
 
